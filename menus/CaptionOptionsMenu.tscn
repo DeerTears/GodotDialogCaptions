@@ -1,0 +1,117 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://styles/BlockBackground.tres" type="StyleBox" id=1]
+[ext_resource path="res://menus/CaptionOptionsMenu.gd" type="Script" id=2]
+[ext_resource path="res://styles/fonts/verdana/verdana-normal.tres" type="DynamicFont" id=3]
+
+[node name="CaptionOptionsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -122.0
+margin_right = 122.0
+margin_bottom = -300.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Preview" type="Label" parent="VBoxContainer"]
+margin_top = 150.0
+margin_right = 244.0
+margin_bottom = 200.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = ExtResource( 1 )
+text = "Lorum Ipsum"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 204.0
+margin_right = 244.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Labels" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 166.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Labels"]
+margin_top = 3.0
+margin_right = 166.0
+margin_bottom = 17.0
+size_flags_vertical = 6
+text = "Block Background Opacity"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Labels"]
+margin_top = 28.0
+margin_right = 166.0
+margin_bottom = 42.0
+size_flags_vertical = 6
+text = "Text Size"
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Labels"]
+margin_top = 53.0
+margin_right = 166.0
+margin_bottom = 67.0
+size_flags_vertical = 6
+text = "Text Outline"
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/Labels"]
+margin_top = 78.0
+margin_right = 166.0
+margin_bottom = 92.0
+size_flags_vertical = 6
+text = "Language"
+
+[node name="Controls" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 170.0
+margin_right = 244.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlockOpacity" type="HSlider" parent="VBoxContainer/HBoxContainer/Controls"]
+margin_right = 74.0
+margin_bottom = 16.0
+size_flags_vertical = 6
+max_value = 1.0
+step = 0.01
+value = 0.49
+
+[node name="TextSize" type="SpinBox" parent="VBoxContainer/HBoxContainer/Controls"]
+margin_top = 20.0
+margin_right = 74.0
+margin_bottom = 44.0
+size_flags_vertical = 6
+
+[node name="TextOutline" type="SpinBox" parent="VBoxContainer/HBoxContainer/Controls"]
+margin_top = 48.0
+margin_right = 74.0
+margin_bottom = 72.0
+size_flags_vertical = 6
+
+[node name="Locale" type="OptionButton" parent="VBoxContainer/HBoxContainer/Controls"]
+margin_top = 76.0
+margin_right = 74.0
+margin_bottom = 96.0
+size_flags_vertical = 6
+
+[node name="Back" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
